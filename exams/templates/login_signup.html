@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block titlebar %}
+{% endblock %}
+{% block sidebar %}
+{% endblock %}
+{% block content %}
+<div class="container"  id="login">
+    <h3>Don't have an account?Click here to signup for free..</h3>
+    <button type="submit" class="btn btn-success" onclick="showsigndiv()">Signup</button><hr>
+    <form class="form-horizontal" id="signupform" style="display:none" method="POST">
+         <div class="form-group">
+            <label class="control-label col-sm-2" for="Username">Username:</label>
+             <div class="col-sm-6">
+            <input type="text" class="form-control" id="Username" placeholder="Enter Username" name="Username">
+            </div>
+        </div>
+         <div class="form-group">
+              <label class="control-label col-sm-2" for="firstname">Firstname:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="firstname" placeholder="Enter firstname" name="firstname">
+              </div>
+        </div>
+    <div class="form-group">
+          <label class="control-label col-sm-2" for="lastname">Lastname:</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="lastname" placeholder="Enter lastname" name="lastname">
+          </div>
+    </div>
+    <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Email:</label>
+          <div class="col-sm-6">
+            <input type="email" class="form-control" id="signemail" placeholder="Enter email" name="email">
+          </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" id="signpwd" placeholder="Enter password" name="pwd">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Confirm Password:</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" id="signconfpwd" placeholder="Confirm password" name="pwd">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+        <h2>Already have an account?? User Login</h2>
+         <button type="submit" class="btn btn-success" onclick="showDiv()">Login</button>
+        <hr>
+        <form class="form-horizontal" id="loginform" style="display:none" method="POST">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-6">
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox" name="remember"> Remember me</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+    </div>
+{% endblock %}

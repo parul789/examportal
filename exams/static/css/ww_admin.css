@@ -1,0 +1,35 @@
+#sidebar {
+    list-style-type : none;
+    }
+
+#sidebar li a {
+    position:relative;
+    top:50px;
+    right:30px;
+}
+
+.sidenav {
+    height: 520px;
+    width: 200px;
+    position: relative;
+    left: 10px;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+}
+#login{
+    align:center;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+

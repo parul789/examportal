@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" ng-app="ExamApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exam Portal</title>
+    <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{% static '/css/ww_admin.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    {% block css %}{% endblock %}
+</head>
+<body>
+{% block titlebar %}
+<nav class=" navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Exam Portal</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/exam-portal/home/">Home</a></li>
+      <li><a href="/exam-portal/exams/">Exams</a></li>
+      <li><a href="/exam-portal/admin/">Admin</a></li>
+      <li><a href="/exam-portal/examanees/">Examnees</a></li>
+    </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Sign Up</a></li>
+      <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Login</a></li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+<div class="row col-sm-12">
+    <div class="col-sm-3">
+    {% block sidebar %}
+    <div class=" sidenav" id="sidebardiv">
+        <ul id="sidebar">
+            <li><a href="#">Symptoms</a></li>
+            <li class=""><a href="/www.google.com/">Exercises</a></li>
+            <li class=""><a href="/ww_admin/medicationslist/">Medications</a></li>
+            <li class=""><a href="/ww_admin/restandrelaxationlist/">Relaxation</a></li>
+            <li class=""><a href="/ww_admin/userslist/">Users</a></li>
+        </ul>
+    </div>
+    {% endblock %}
+        </div>
+    <div class="col-sm-9" id="main-content" ng-controller="ExamController">
+    {% block content %}
+
+    {% endblock %}
+    </div>
+</div>
+</body>
+<script src="{% static '/js/angular.min.js' %}"></script>
+<script src="{% static '/js/ui.router.min.js' %}"></script>
+<script src="{% static '/js/bootstrap.jquery.min.js' %}"></script>
+<script src="{% static '/js/bootstrap.min.js' %}"></script>
+<script src="{% static '/js/app.js' %}"></script>
+<script src="{% static '/js/controller.js' %}"></script>
+<script>
+    function showDiv() {
+   document.getElementById('loginform').style.display = "block";
+   document.getElementById('signupform').style.display = "none";
+}
+function showsigndiv(){
+    document.getElementById('loginform').style.display = "none";
+    document.getElementById('signupform').style.display = "block";
+}
+</script>
+{% block js %}{% endblock %}
+</html>
